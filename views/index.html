@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../public/styles/styles.css" />
+    <title>RetroGate</title>
+    <script src="../public/scripts/script.js" defer></script>
+  </head>
+  <body>
+    <section id="container">
+      <header>
+        <img id="imglogo" src="/public/images/Logo.jpg" alt="" />
+        <div id="logo">
+          <h2>Retro <span>Gate</span></h2>
+        </div>
+        <nav>
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">Search</a>
+          </li>
+          <li>
+            <a href="">Liked</a>
+          </li>
+        </nav>
+      </header>
+      <section id="registeration">
+        <ul>
+          <li><a href="">Sign Up</a></li>
+          <li><a href="">Sign In</a></li>
+        </ul>
+        <section id="interface">
+          <section id="cards">
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+          </section>
+          <section id="playing">
+            <div id="progress"></div>
+          </section>
+          <audio
+            src="../music/Sonic Mayhem - Futureland (feat. Power Glove).mp3"
+            id="audio"
+          ></audio>
+          <div class="navigation">
+            <button id="prev" class="action-btn">
+              <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn-big">
+              <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+              <i class="fas fa-forward"></i>
+            </button>
+          </div>
+          <p id="nowplaying">Now Playing</p>
+        </section>
+      </section>
+    </section>
+    <footer>
+      <p>footer place holder</p>
+    </footer>
+    <section id="filler"></section>
+  </body>
+</html>
