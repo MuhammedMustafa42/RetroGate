@@ -120,7 +120,7 @@ h2 span {
 
 #nowplaying {
   color: rgb(224, 217, 246);
-  margin-left: 7em;
+  margin-left: 6em;
 }
 
 .navigation {
@@ -153,3 +153,28 @@ h2 span {
 /* .play {
   
 } */
+
+.cd-img {
+  height: 10rem;
+  margin-top: 1em;
+  margin-left: 1em;
+  opacity: 0.5;
+
+  animation: rotate 3s linear infinite;
+
+  animation-play-state: paused;
+}
+
+#interface.play .cd-img {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
