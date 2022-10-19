@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const port = 8000;
-const db = require("../data/database");
+const db = require("./data/database");
 
 app.use(express.static("public"));
 app.use(express.static("music"));
