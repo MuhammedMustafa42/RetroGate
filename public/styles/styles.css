@@ -5,7 +5,7 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
 }
 
 #container {
@@ -77,7 +77,7 @@ footer p {
 
 h2 span {
   color: rgb(23, 145, 177);
-	font-family: 'Nothing You Could Do', cursive;
+  font-family: "Nothing You Could Do", cursive;
 }
 
 #filler {
@@ -196,4 +196,79 @@ h2 span {
   to {
     transform: rotate(360deg);
   }
+}
+
+.sign-in-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+  background-color: aliceblue;
+  width: 30em;
+  height: 24em;
+  max-width: 80%;
+  border-radius: 6px;
+}
+
+.sign-in-popup.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.sign-in-header {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.sign-in-header .sign-in-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sign-in-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sign-in-body {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#sign-in-button {
+  text-decoration: none;
+  color: rgb(224, 217, 246);
+  cursor: pointer;
+}
+
+#sign-up-button {
+  text-decoration: none;
+  color: rgb(224, 217, 246);
+  cursor: pointer;
 }

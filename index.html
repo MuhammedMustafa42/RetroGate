@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/styles/styles.css" />
     <title>RetroGate</title>
     <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/sign.js" defer></script>
   </head>
   <body>
     <section id="container">
@@ -46,8 +47,8 @@
       </header>
       <section id="registeration">
         <ul>
-          <li><a href="">Sign Up</a></li>
-          <li><a href="">Sign In</a></li>
+          <li id="sign-up-button">Sign Up</li>
+          <li id="sign-in-button">Sign In</li>
         </ul>
         <section id="interface">
           <section id="cards">
@@ -55,8 +56,8 @@
               <img class="cd-img" src="/images/disc.png" alt="cd image" />
             </div>
             <div class="songlist">
-              <h2 id="listh2">SONGS LIST</h2>
-              <hr>
+              <h2 id="listh2">TRACKS LIST</h2>
+              <hr />
               <ol class="songs">
                 <li>1-Sonic Mayhem - Futureland</li>
                 <li>1-Sonic Mayhem - Futureland</li>
@@ -88,6 +89,19 @@
         </section>
       </section>
     </section>
+    <div class="sign-in-popup" id="sign-in">
+      <div class="sign-in-header">
+        <div class="sign-in-title">Sign In</div>
+        <button id="close-button" class="close-button">&times;</button>
+      </div>
+      <div class="sign-in-body">
+        <label for="">Email</label>
+        <input type="text" />
+        <label for="">Password</label>
+        <input type="text" />
+      </div>
+    </div>
+    <div id="overlay"></div>
     <footer>
       <p>footer place holder</p>
     </footer>
