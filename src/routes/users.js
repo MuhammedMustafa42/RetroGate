@@ -15,6 +15,7 @@ router.post("/users", async function (req, res) {
   };
   const result = await db.getDb().collection("users").insertOne(newUser);
   console.log(result);
+  console.log(newUser);
   res.redirect("/");
 });
 
