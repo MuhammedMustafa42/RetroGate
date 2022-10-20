@@ -1,15 +1,16 @@
 const express = require("express");
-const path = require("path");
 const app = express();
 const port = 8000;
 const db = require("./data/database");
+const usersRoutes = require("./routes/users");
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static("public"));
 app.use(express.static("music"));
 
-app.get("/", function (req, res) {
-  res.sendFile(path.resolve("index.html"));
-});
+app.use(usersRoutes);
 
 app.use(function (error, req, res, next) {
   // Default error handling function
