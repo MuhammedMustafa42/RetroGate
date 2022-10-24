@@ -96,12 +96,12 @@
         <button id="close-button" class="close-button">&times;</button>
       </div>
       <div class="sign-in-body">
-        <form class="sign-in-body" action="">
-          <label for="">Email</label>
-          <input type="text" />
-          <label for="">Password</label>
-          <input type="text" />
-          <button class="buttons">Sign In</button>
+        <form role="form" class="sign-in-body" action="/users" method="GET">
+          <label for="emailin">Email</label>
+          <input type="text" id="emailin" name="emailin" required />
+          <label for="passwordin">Password</label>
+          <input type="text" id="passwordin" name="passwordin" required />
+          <button type="submit" class="buttons">Sign In</button>
         </form>
       </div>
     </div>
