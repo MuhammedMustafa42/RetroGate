@@ -338,3 +338,9 @@ input {
   margin-top: 1rem;
   cursor: pointer;
 }
+
+#user {
+  color: rgb(224, 217, 246);
+  margin-top: 0.2rem;
+  margin-right: 4rem;
+}

@@ -47,6 +47,7 @@
       </header>
       <section id="registeration">
         <ul>
+          <li id="user"><%= user.username %></li>
           <li id="sign-up-button">Sign Up</li>
           <li id="sign-in-button">Sign In</li>
         </ul>
@@ -96,7 +97,7 @@
         <button id="close-button" class="close-button">&times;</button>
       </div>
       <div class="sign-in-body">
-        <form role="form" class="sign-in-body" action="/users" method="GET">
+        <form role="form" class="sign-in-body" action="/auth" method="POST">
           <label for="emailin">Email</label>
           <input type="text" id="emailin" name="emailin" required />
           <label for="passwordin">Password</label>
