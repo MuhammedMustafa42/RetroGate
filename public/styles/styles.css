@@ -57,6 +57,7 @@ header {
   margin: 0;
   padding: 0;
   z-index: 0;
+  box-shadow: 0px 0px 3px var(--yellow);
 }
 
 header li {
@@ -262,6 +263,7 @@ h2 span {
 #nowplaying {
   color: rgb(224, 217, 246);
   margin-left: 6em;
+  margin-top: 2em;
 }
 
 .navigation {
@@ -271,7 +273,7 @@ h2 span {
 
 .action-btn {
   background-color: rgba(23, 145, 177, 0.4);
-  border: 0;
+  border: solid 1.5px var(--red-scanline);
   color: rgb(12, 12, 34);
   cursor: pointer;
   font-size: 15px;
@@ -282,13 +284,25 @@ h2 span {
 .action-btn-big {
   background-color: rgba(184, 14, 101, 0.8);
   font-size: 20px;
-  border: 0;
+  border: solid 1px var(--red-scanline);
   border-radius: 3px;
   cursor: pointer;
 }
 
+.action-btn-big:hover {
+  border: solid 1px var(--blue);
+  transition: color 1s linear;
+  transition: border-color 0.5s linear;
+}
+
 .action-btn:focus {
   outline: 0;
+}
+
+.action-btn:hover {
+  border: solid 1px var(--blue);
+  transition: color 1s linear;
+  transition: border-color 0.5s linear;
 }
 
 /* .play {
@@ -501,6 +515,7 @@ input:focus {
 }
 
 #user {
+  font-size: 0.8rem;
   color: var(--yellow);
   margin-top: 0.3rem;
   margin-right: 1rem;
