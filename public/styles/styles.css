@@ -245,6 +245,7 @@ h2 span {
 
 #playing {
   background-color: rgba(23, 145, 177, 0.4);
+  border: solid 1.5px var(--red-scanline);
   width: 40rem;
   height: 1rem;
   margin-left: 4em;
@@ -533,4 +534,8 @@ input:focus {
 label {
   color: var(--blue);
   text-shadow: 0px 0px 3px var(--red-glow);
+}
+
+.songs li {
+  font-size: 0.8rem;
 }
