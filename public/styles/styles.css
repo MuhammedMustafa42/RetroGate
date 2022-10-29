@@ -1,3 +1,18 @@
+:root {
+  --red: rgba(211, 87, 91, 0.81);
+  --red-glow: rgba(211, 87, 91, 0.91);
+  --red-scanline: rgba(204, 94, 199, 0.2);
+  --black-scanline: rgba(1, 1, 1, 0.9);
+  --black-hover-background: rgba(0, 0, 0, 0.25);
+  --blue: #61e4fa;
+  --yellow: #f7f500;
+  --text-shadow: rgb(0, 208, 255);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(37, 41, 84);
   background-image: url("../images/Hero2.jpg");
@@ -22,34 +37,137 @@ li {
 }
 
 header {
-  width: 17em;
+  width: 20em;
   height: 92vh;
-  background-color: rgb(12, 12, 34);
+  background: repeating-linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--red-scanline) 1px,
+      var(--red-scanline) 3px,
+      var(--red-scanline) 5px,
+      var(--red-scanline) 4px,
+      transparent 0.5%
+    ),
+    repeating-linear-gradient(
+      to left,
+      var(--black-scanline) 100%,
+      var(--black-scanline) 100%
+    );
   margin: 0;
   padding: 0;
   z-index: 0;
 }
 
-header a {
-  margin: 0 5em;
+header li {
+  margin: 0;
+  color: aliceblue;
+  font-size: 1.2rem;
+}
+
+#menu {
+  margin-left: -1.2em;
+}
+
+#menu li {
+  text-transform: uppercase;
+  cursor: pointer;
+
+  /* font */
+  color: var(--red);
+  text-shadow: 0px 0px 3px var(--red-glow);
+
+  /* border */
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: transparent;
+
+  /* layout */
+  position: relative;
+  padding: 3px;
+  margin: 10px 0;
+  width: 10.5em;
+  height: 1.8em;
+  clip-path: polygon(10.5em 0, 10.5em 1em, 9.5em 2em, 0 2em, 0 0);
+
+  /* animation */
+  transition: color 1s linear;
+  transition: border-color 1s linear;
+}
+
+#menu li:after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  right: -13px;
+  width: 1em;
+  height: 1em;
+
+  transform: rotate(45deg);
+
+  /* border */
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: transparent;
+
+  /* animation */
+  transition: color 1s linear;
+  transition: border-color 1s linear;
+}
+
+#menu li:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  /* animation */
+  transition: color 0.23s linear;
+  transition: border-color 0.23s linear;
+
+  background: var(--black-hover-background);
+}
+
+#menu li:hover:after {
+  color: var(--blue);
+  border-color: var(--blue);
+
+  /* animation */
+  transition: color 0.23s linear;
+  transition: border-color 0.23s linear;
+
+  background: var(--black-hover-background);
 }
 
 h2 {
-  margin: 0 1em;
+  margin-top: 1em;
+  margin-bottom: 0;
   padding: 0;
-  color: rgb(184, 14, 101);
+  color: var(--yellow);
   font-family: "Bungee Outline", cursive;
   margin-top: -3rem;
+  letter-spacing: 0.2rem;
   z-index: 1;
+  text-align: center;
 }
 
-#listh2 {
+#retro {
+  font-size: 2rem;
+  margin-top: -2em;
+  letter-spacing: 0.3em;
+  text-shadow: var(--text-shadow) 2px 3px 0px;
+}
+
+.gate {
   margin: 0 1em;
   padding: 0;
-  color: rgb(23, 145, 177);
+  color: var(--blue);
   font-family: "Bungee Outline", cursive;
   z-index: 1;
   font-size: 1.2rem;
+}
+
+#gate-logo {
+  margin-left: 7em;
+  margin-top: -1.2em;
+  letter-spacing: 0.2em;
+  font-family: "Bebas Neue", cursive;
 }
 
 #registeration {
@@ -130,7 +248,7 @@ h2 span {
 }
 
 #progress {
-  background-color: rgba(229, 255, 0, 0.6);
+  background-color: var(--yellow);
   border-radius: 4px;
   height: 100%;
   width: 0%;

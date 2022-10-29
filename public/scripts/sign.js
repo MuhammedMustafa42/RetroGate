@@ -28,6 +28,8 @@ function closeModal() {
   overlay.classList.remove("active");
 }
 
+function signOut() {}
+
 openSignInBtn.addEventListener("click", openModal);
 closeSignInBtn.addEventListener("click", closeModal);
 
