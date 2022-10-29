@@ -7,6 +7,7 @@
   --blue: #61e4fa;
   --yellow: #f7f500;
   --text-shadow: rgb(0, 208, 255);
+  --modal-background: rgba(204, 94, 98, 0.2);
 }
 
 * {
@@ -20,7 +21,7 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Orbitron", sans-serif;
 }
 
 #container {
@@ -66,6 +67,7 @@ header li {
 
 #menu {
   margin-left: -1.2em;
+  margin-top: 3em;
 }
 
 #menu li {
@@ -151,7 +153,7 @@ h2 {
   font-size: 2rem;
   margin-top: -2em;
   letter-spacing: 0.3em;
-  text-shadow: var(--text-shadow) 2px 3px 0px;
+  text-shadow: var(--text-shadow) 1px 2px 0px;
 }
 
 .gate {
@@ -164,10 +166,11 @@ h2 {
 }
 
 #gate-logo {
-  margin-left: 7em;
+  margin-left: 6.5em;
   margin-top: -1.2em;
   letter-spacing: 0.2em;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: var(--text-shadow) 0.5px 1px 0;
 }
 
 #registeration {
@@ -209,6 +212,7 @@ h2 span {
   position: relative;
   z-index: -1;
   margin: 0 2em;
+  margin-top: 1em;
 }
 
 #cards {
@@ -323,12 +327,26 @@ h2 span {
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
   z-index: 10;
-  background-color: rgb(184, 14, 101);
+  background: repeating-linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--modal-background) 1px,
+      var(--modal-background) 3px,
+      var(--modal-background) 5px,
+      var(--modal-background) 4px,
+      transparent 0.5%
+    ),
+    repeating-linear-gradient(
+      to left,
+      var(--black-scanline) 100%,
+      var(--black-scanline) 100%
+    );
   width: 30em;
   height: 24em;
   max-width: 80%;
   border-radius: 6px;
   color: aliceblue;
+  box-shadow: var(--black-scanline) 2px 3px 0px;
 }
 
 .sign-in-popup.active {
@@ -346,6 +364,8 @@ h2 span {
 .sign-in-header .sign-in-title {
   font-size: 1.5rem;
   font-weight: bold;
+  color: var(--red);
+  text-shadow: var(--red-glow) 1px 2px 0px;
 }
 
 .sign-in-header .close-button {
@@ -370,7 +390,7 @@ h2 span {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   pointer-events: none;
   transition: 200ms ease-in-out;
 }
@@ -403,12 +423,26 @@ h2 span {
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
   z-index: 10;
-  background-color: rgb(184, 14, 101);
+  background: repeating-linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--modal-background) 1px,
+      var(--modal-background) 3px,
+      var(--modal-background) 5px,
+      var(--modal-background) 4px,
+      transparent 0.5%
+    ),
+    repeating-linear-gradient(
+      to left,
+      var(--black-scanline) 100%,
+      var(--black-scanline) 100%
+    );
   width: 30em;
   height: 24em;
   max-width: 80%;
   border-radius: 6px;
   color: aliceblue;
+  box-shadow: var(--black-scanline) 2px 3px 0px;
 }
 
 .sign-up-popup.active {
@@ -426,6 +460,8 @@ h2 span {
 .sign-up-header .sign-up-title {
   font-size: 1.5rem;
   font-weight: bold;
+  color: var(--red);
+  text-shadow: var(--red-glow) 1px 2px 0px;
 }
 
 .sign-up-header #up-close-button {
@@ -445,10 +481,17 @@ h2 span {
 
 input {
   background-color: rgba(0, 0, 0, 0.4);
-  color: aliceblue;
-  border: none;
+  color: var(--blue);
   border-radius: 4px;
   height: 1.5rem;
+  border-color: var(--blue);
+  margin-bottom: 1em;
+  font-family: "Orbitron", sans-serif;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 .buttons {
@@ -458,7 +501,21 @@ input {
 }
 
 #user {
-  color: rgb(224, 217, 246);
-  margin-top: 0.2rem;
-  margin-right: 4rem;
+  color: var(--yellow);
+  margin-top: 0.3rem;
+  margin-right: 1rem;
+  text-shadow: var(--text-shadow) 1px 1.5px 0px;
+  text-transform: uppercase;
+}
+
+#user-icon {
+  margin-top: 0.2em;
+  width: 2em;
+  height: auto;
+  cursor: pointer;
+}
+
+label {
+  color: var(--blue);
+  text-shadow: 0px 0px 3px var(--red-glow);
 }

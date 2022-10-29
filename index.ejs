@@ -17,6 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -32,12 +38,12 @@
         <img id="imglogo" src="/images/Logo.png" alt="" />
         <div id="logo">
           <h2 id="retro">Retro</h2>
-          <h3 class="gate"  id="gate-logo">Gate</h3>
+          <h3 class="gate" id="gate-logo">Gate</h3>
         </div>
         <nav>
           <ul id="menu">
-            <li>Home</li>
-            <li>Tracks</li>
+            <li id="sign-up-button">sign up</li>
+            <li id="sign-in-button">sign in</li>
             <li>Upload</li>
             <li>Logout</li>
           </ul>
@@ -45,9 +51,8 @@
       </header>
       <section id="registeration">
         <ul>
+          <img id="user-icon" src="/images/user-icon.png" alt="user icon" />
           <li id="user"><%= user.username %></li>
-          <li id="sign-up-button">Sign Up</li>
-          <li id="sign-in-button">Sign In</li>
         </ul>
         <section id="interface">
           <section id="cards">
